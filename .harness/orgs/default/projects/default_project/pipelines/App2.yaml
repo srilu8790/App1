@@ -8,7 +8,7 @@ pipeline:
     ci:
       codebase:
         connectorRef: Github
-        repoName: App2
+        repoName: App1
         build: <+input>
   stages:
     - stage:
