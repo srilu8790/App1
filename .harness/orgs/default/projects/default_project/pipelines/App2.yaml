@@ -37,4 +37,4 @@ pipeline:
                   identifier: Run_1
                   spec:
                     shell: Bash
-                    command: python app.py
+                    command: python3 app.py
