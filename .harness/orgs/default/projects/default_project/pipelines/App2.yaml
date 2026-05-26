@@ -1,0 +1,40 @@
+pipeline:
+  name: App2
+  identifier: App2
+  projectIdentifier: default_project
+  orgIdentifier: default
+  tags: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: Github
+        repoName: App2
+        build: <+input>
+  stages:
+    - stage:
+        name: Build
+        identifier: Build
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          caching:
+            enabled: true
+            override: true
+          buildIntelligence:
+            enabled: true
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Docker
+            spec: {}
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Run_1
+                  identifier: Run_1
+                  spec:
+                    shell: Bash
+                    command: python app.py
