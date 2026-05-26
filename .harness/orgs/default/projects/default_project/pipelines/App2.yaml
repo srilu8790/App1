@@ -37,4 +37,6 @@ pipeline:
                   identifier: Run_1
                   spec:
                     shell: Bash
-                    command: python3 app.py
+                    command: |-
+                      pip3 install -r requirements.txt
+                      python3 app.py
