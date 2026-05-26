@@ -1,0 +1,9 @@
+services:
+  python-demo:
+    image: sri:latest
+    ports:
+      - "8000:8000"
+    environment:
+      APP_NAME: "Demo python"
+      APP_ENV: "development"
+      SECRET_KEY: "my-secret-key"
